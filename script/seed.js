@@ -27,8 +27,6 @@ async function seed() {
       description: "this is an great album, buy it!",
       genre: 'soul',
     })
-
-
   ])
 
   console.log(`seeded ${users.length} users`)

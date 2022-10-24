@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import AuthForm from '../features/auth/AuthForm';
-import Home from '../features/home/Home';
+import AuthForm from '../components/AuthForm';
+import Home from '../components/Home';
+import AllVinyls from '../components/vinyl/AllVinyls';
 import { me } from './store';
 
 /**
@@ -38,6 +39,10 @@ const AppRoutes = () => {
             path="/signup"
             element={<AuthForm name="signup" displayName="Sign Up" />}
           />
+          <Route
+            path="/allVinyls"
+            element={<AllVinyls name="allVinyls" displayName="All Vinyls" />}
+            />
         </Routes>
       )}
     </div>
