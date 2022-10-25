@@ -15,11 +15,13 @@ export const fetchVinyls = createAsyncThunk("allVinyls", async () => {
 
   const vinylSlice = createSlice ({
     name: "allVinyls",
-    initialState: [],
+    initialState: {
+        allVinyls: [],
+    },
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchVinyls.fulfilled , (state, action)=> {
-          state.allVinyls= action.payload
+          state.allVinyls = action.payload
         }
      )
     }

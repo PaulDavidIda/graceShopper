@@ -27,22 +27,24 @@ const AppRoutes = () => {
         </Routes>
       ) : (
         <Routes>
-          <Route
-            path="/*"
-            element={<AuthForm name="login" displayName="Login" />}
+             <Route
+            path="/allVinyls"
+            element={<AllVinyls name="allVinyls" displayName="All Vinyls" />}
+            />
+               <Route
+            path="/signup"
+            element={<AuthForm name="signup" displayName="Sign Up" />}
           />
-          <Route
+           <Route
             path="/login"
             element={<AuthForm name="login" displayName="Login" />}
           />
           <Route
-            path="/signup"
-            element={<AuthForm name="signup" displayName="Sign Up" />}
+            path="/*"
+            element={<AuthForm name="login" displayName="Login" />}
           />
-          <Route
-            path="/allVinyls"
-            element={<AllVinyls name="allVinyls" displayName="All Vinyls" />}
-            />
+     
+       
         </Routes>
       )}
     </div>

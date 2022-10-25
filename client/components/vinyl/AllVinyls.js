@@ -20,10 +20,10 @@ const AllVinyls = () => {
         dispatch(fetchVinyls());
     },[])
  
-console.log(vinyls, "vinyls")
+// console.log(fetchVinyls(), "vinyls")
   return (
     <div>
-      <div>All Albums,
+      <div>All Albums, {vinyls}
         <ul>
          {/* {vinyls.map((album)=> {
         return <div key={album.id}>{album.name}</div>
